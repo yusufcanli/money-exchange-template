@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/images/logo.png">
+    <title>Source Exchange</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <script src="assets/js/slippry.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/slippry.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="title">
+                <img src="assets/images/logo.png" alt="source-exchange">
+                <h3>Source Exchange</h3>
+            </div>
+            <div class="dropdown dr-list">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">MONEY CURRENCIES</a>
+                    <a class="dropdown-item" href="#">CRYPTOCOINS</a>
+                    <a class="dropdown-item" href="#">NEWS</a>
+                    <a class="dropdown-item" href="#">ARTICLES</a>
+                    <a class="dropdown-item" href="#">LOGIN</a>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="#">MONEY CURRENCIES</a>
+                <a href="#">CRYPTOCOINS</a>
+                <a href="#">NEWS</a>
+                <a href="#">ARTICLES</a>
+            </div>
+        </div>
+    </header>
+    <div class="row table">
+        <div class="index">
+            <div class="index-item">
+                <div class="index-sign">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="index-body">
+                    <div class="index-title">
+                        <span>USD</span>
+                    </div>
+                    <div class="index-cur gain">
+                        4.7165
+                    </div>
+                </div>
+                <div class="index-last">
+                    <i class="fas fa-caret-up"></i>
+                </div>
+            </div>
+            <div class="index-item">
+                <div class="index-sign">
+                    <i class="fas fa-euro-sign"></i>
+                </div>
+                <div class="index-body">
+                    <div class="index-title">
+                        <span>EURO</span>
+                    </div>
+                    <div class="index-cur loss">
+                        5.5360
+                    </div>
+                </div>
+                <div class="index-last">
+                    <i class="fas fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="index-item">
+                <div class="index-sign">
+                    <i class="fas fa-pound-sign"></i>
+                </div>
+                <div class="index-body">
+                    <div class="index-title">
+                        <span>POUND</span>
+                    </div>
+                    <div class="index-cur loss">
+                        6.4088
+                    </div>
+                </div>
+                <div class="index-last">
+                    <i class="fas fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="index-item">
+                <div class="index-sign">
+                    <i class="fab fa-btc"></i>
+                </div>
+                <div class="index-body">
+                    <div class="index-title">
+                        <span>BTC</span>
+                    </div>
+                    <div class="index-cur gain">
+                        $8.788
+                    </div>
+                </div>
+                <div class="index-last">
+                    <i class="fas fa-caret-up"></i>
+                </div>
+            </div>
+        </div>
+        <div class="index-table">
+            <canvas id="Chart" width="100%" height="45"></canvas>
+        </div>
+        <div class="news">
+            <ul id="news-slider">
+                <li>
+                    <a href="#slide1"><img src="assets/images/news-1.jpg" alt="Gold markets have been very noisy during Wednesday"></a>
+                </li>
+                <li>
+                    <a href="#slide2"><img src="assets/images/news-2.gif"  alt="Every cryptocurrency’s nightmare scenario is happening to Bitcoin"></a>
+                </li>
+                <li>
+                    <a href="#slide3"><img src="assets/images/news-3.jpg" alt="The 2020's Might Be The Worst Decade In U.S. History"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row currency">
+        <div class="col-sm-3">
+            <div class="cur-table">
+                <div class="cur-table-title">
+                    <h3>TOP GAINERS</h3>
+                </div>
+                <div class="cur-table-item">
+                    <div class="cur-table-item-title">
+                        <span>BEYAZ</span>
+                    </div>
+                    <div class="cur-table-item-value">
+                        <span>22,80</span>
+                        <i class="fas fa-caret-up"></i>
+                    </div>
+                </div>
+                <div class="cur-table-item">
+                    <div class="cur-table-item-title">
+                        <span>KERVT</span>
+                    </div>
+                    <div class="cur-table-item-value">
+                        <span>2,77</span>
+                        <i class="fas fa-caret-up"></i>
+                    </div>
+                </div>
+                <div class="cur-table-item">
+                    <div class="cur-table-item-title">
+                        <span>SODSN</span>
+                    </div>
+                    <div class="cur-table-item-value">
+                        <span>4,85</span>
+                        <i class="fas fa-caret-up"></i>
+                    </div>
+                </div>
+                <div class="cur-table-item">
+                    <div class="cur-table-item-title">
+                        <span>COSMO</span>
+                    </div>
+                    <div class="cur-table-item-value">
+                        <span>1,20</span>
+                        <i class="fas fa-caret-up"></i>
+                    </div>
+                </div>
+                <div class="cur-table-item">
+                    <div class="cur-table-item-title">
+                        <span>ALYAG</span>
+                    </div>
+                    <div class="cur-table-item-value">
+                        <span>0,69</span>
+                        <i class="fas fa-caret-up"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="cur-table">
+                <div class="cur-table-title">
+                    <h3>TOP LOSERS</h3>
+                </div>
+                <div class="cur-table-item">
+                    <div class="cur-table-item-title">
+                        <span>MCTAS</span>
+                    </div>
+                    <div class="cur-table-item-value">
+                        <span>-11,99</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="cur-table-item">
+                    <div class="cur-table-item-title">
+                        <span>KSTUR</span>
+                    </div>
+                    <div class="cur-table-item-value">
+                        <span>-10,35</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="cur-table-item">
+                    <div class="cur-table-item-title">
+                        <span>OZGYO</span>
+                    </div>
+                    <div class="cur-table-item-value">
+                        <span>-10,10</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="cur-table-item">
+                    <div class="cur-table-item-title">
+                        <span>ISFIN</span>
+                    </div>
+                    <div class="cur-table-item-value">
+                        <span>-3,54</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="cur-table-item">
+                    <div class="cur-table-item-title">
+                        <span>MEGAP</span>
+                    </div>
+                    <div class="cur-table-item-value">
+                        <span>-1,70</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="cur-table" style="padding: 0;">
+                <canvas id="pie-chart" width="100%" height="85"></canvas>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="cur-table">
+                <div class="cur-table-title">
+                    <h3>CONVERTER</h3>
+                </div>
+                <div class="cur-calc">
+                    <input class="form-control" type="text">
+                    <select class="form-control" name="calc-select" id="calc-select">
+                        <option>USD</option>
+                        <option>EURO</option>
+                        <option>GOLD GR.</option>
+                        <option>BTC</option>
+                    </select>
+                </div>
+                <div class=" cur-calc">
+                    <input class="form-control" type="text">
+                    <select class="form-control">
+                        <option>USD</option>
+                        <option>EURO</option>
+                        <option>GOLD GR.</option>
+                        <option>BTC</option>
+                    </select>
+                </div>
+                <div class=" cur-calc">
+                    <input class="form-control" type="text">
+                    <select class="form-control">
+                        <option>USD</option>
+                        <option>EURO</option>
+                        <option>GOLD GR.</option>
+                        <option>BTC</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row articles">
+        <div class="auths">
+            <div class="cur-table-title">
+                <h3>LAST ARTICLES</h3>
+            </div>
+            <div class="authors">
+                <div class="article-item">
+                    <div class="article-img">
+                        <img src="assets/images/author-1.jpg" alt="John Doe">
+                    </div>
+                    <div class="article-body">
+                        <div class="article-name">
+                            <span>John Doe</span>
+                        </div>
+                        <hr>
+                        <div class="article-title">
+                            <span>Every cryptocurrency’s nightmare scenario is happening to Bitcoin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-item">
+                    <div class="article-img">
+                        <img src="assets/images/author-2.png" alt="John Doe">
+                    </div>
+                    <div class="article-body">
+                        <div class="article-name">
+                            <span>Stephen West</span>
+                        </div>
+                        <hr>
+                        <div class="article-title">
+                            <span>Gold Has been planted!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-item">
+                    <div class="article-img">
+                        <img src="assets/images/author-3.jpg" alt="John Doe">
+                    </div>
+                    <div class="article-body">
+                        <div class="article-name">
+                            <span>Laurel Alice</span>
+                        </div>
+                        <hr>
+                        <div class="article-title">
+                            <span>Situation of USD after Trump and Xi Meeting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-item">
+                    <div class="article-img">
+                        <img src="assets/images/author-4.jpg" alt="John Doe">
+                    </div>
+                    <div class="article-body">
+                        <div class="article-name">
+                            <span>John Doe</span>
+                        </div>
+                        <hr>
+                        <div class="article-title">
+                            <span>Every cryptocurrency’s nightmare scenario is happening to Bitcoin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="latest-news">
+            <div class="cur-table-title">
+                <h3>LATEST NEWS</h3>
+            </div>
+            <div class="news-item">
+                <div class="news-img">
+                    <img src="assets/images/news-11.jpg" alt="">
+                </div>
+                <div class="news-body">
+                    <div class="news-title">
+                        <span>Gold has been Planted!</span>
+                    </div>
+                    <div class="news-preview">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-img">
+                    <img src="assets/images/news-22.jpg" alt="">
+                </div>
+                <div class="news-body">
+                    <div class="news-title">
+                        <span>The 2020's Might Be The Worst Decade</span>
+                    </div>
+                    <div class="news-preview">
+                        <span>Quae aut cumque eveniet esse fugiat, repudiandae ipsa vero?</span>
+                    </div>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-img">
+                    <img src="assets/images/news-33.jpg" alt="">
+                </div>
+                <div class="news-body">
+                    <div class="news-title">
+                        <span>Every crypto’s nightmare scenario </span>
+                    </div>
+                    <div class="news-preview">
+                        <span>Obcaecati temporibus aut quasi fuga distinctio, saepe deserunt quaerat</span>
+                    </div>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-img">
+                    <img src="assets/images/news-1.jpg" alt="">
+                </div>
+                <div class="news-body">
+                    <div class="news-title">
+                        <span>Gold markets have been very noisy</span>
+                    </div>
+                    <div class="news-preview">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center m-4">
+                <a href="#">Show More...</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="row footer-menu">
+            <div class="col-sm-4">
+                <h3>Source Exchange</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="#">Money Market</a><br>
+                        <a href="">News</a><br>
+                        <a href="">Authors</a><br>
+                        <a href="">Sign In</a><br>
+                        <a href="">Sign Up</a><br>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="">USD</a><br>
+                        <a href="">Euro</a><br>
+                        <a href="">Pound</a><br>
+                        <a href="">Gold</a><br>
+                        <a href="">Cryptocoins</a><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3>Money Currencies</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a href="">USD</a><br>
+                        <a href="">Euro</a><br>
+                        <a href="">Pound</a><br>
+                        <a href="">Gold</a><br>
+                        <a href="">Russian Ruble</a><br>
+                        <a href="">Other Currencies</a><br>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="">Bitcoin</a><br>
+                        <a href="">Bitcoin Cash</a><br>
+                        <a href="">Litecoin</a><br>
+                        <a href="">IOTA</a><br>
+                        <a href="">Ethereum</a><br>
+                        <a href="">Other Cryptocoins</a><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3>Contact</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <span>Source Exchange and Money Corp.</span><br>
+                        <span>361-7936 Feugiat St.</span><br>
+                        <span>03400 P.C. </span><br>
+                        <span>ISTANBUL / TURKEY</span><br>
+                        <span class="social"><i class="fab fa-facebook"></i></span>
+                        <span class="social"><i class="fab fa-twitter"></i></span>
+                        <span class="social"><i class="fab fa-google"></i></span>
+                        <span class="social"><i class="fab fa-linkedin"></i></span>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <span>+212 123 4567</span><br>
+                        <span>+212 987 6543</span><br>
+                        <span>info@sourceexchange.com</span><br>
+                        <span><a href="#">Show in map</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row copyright">
+            <span>Source Exchange | Copyright 2018 ©</span>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
